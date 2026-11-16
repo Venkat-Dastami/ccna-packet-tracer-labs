@@ -1,9 +1,9 @@
 # CCNA Packet Tracer Lab Portfolio
-**Venkat Dastami | Aspiring Junior Systems Administrator · Cloud Support Associate · Junior IT Systems Analyst**
+**Venkat Dastami | IT Support & Network Support**
 
 ## Project overview
 
-Hands-on networking practice in Cisco Packet Tracer, developed while preparing for CCNA 200-301 and targeting Junior Systems Administrator, Cloud Support Associate, and Junior IT Systems Analyst roles. This portfolio connects IPv4 address planning with router and switch configuration, traffic control, and connectivity troubleshooting.
+Hands-on networking practice in Cisco Packet Tracer, developed while preparing for CCNA 200-301 and building toward entry-level IT-support and networking roles. This portfolio connects IPv4 address planning with router and switch configuration, traffic control, and connectivity troubleshooting.
 
 The repository contains **11 Packet Tracer files across nine lab folders**, plus networking-fundamentals notes. The index below summarizes the existing files and their accompanying documentation; it does not represent independently verified test results.
 
@@ -51,16 +51,6 @@ traceroute
 
 These exercises build a structured approach to support incidents: inspect addressing and interface state, follow the traffic path, review routing or VLAN configuration, and retest reachability.
 
-## Relevance to my target roles
-
-| Target role | Networking foundation demonstrated by this portfolio |
-|---|---|
-| Junior Systems Administrator | IPv4 addressing, default gateways, VLANs and routed connectivity provide a foundation for investigating server connectivity issues. |
-| Cloud Support Associate | Subnet planning, routing and traffic-filtering concepts provide a foundation for learning cloud networking and diagnosing reachability. |
-| Junior IT Systems Analyst | Address planning, topology review and configuration verification support structured analysis of connectivity problems. |
-
-This repository documents networking simulations and fundamentals. Windows/Linux server administration and AWS/Azure deployments would require separate project evidence.
-
 ## Setup and review
 
 1. Install Cisco Packet Tracer. The repository does not specify a required version.
@@ -72,7 +62,7 @@ This repository documents networking simulations and fundamentals. Windows/Linux
 4. Inspect the topology, endpoint addressing and device CLI configurations.
 5. Use the relevant verification commands and connectivity tests; use Simulation Mode to follow packet flow. Save a separate copy before experimenting.
 
-## Discussing the labs in systems and cloud-support interviews
+## Discussing the labs in IT-support interviews
 
 Start with a specific lab and explain its purpose, the configuration you worked on, and how you checked it. For a troubleshooting example, describe **the symptom → checks → cause → change → retest**, using only an issue and outcome you can demonstrate.
 
