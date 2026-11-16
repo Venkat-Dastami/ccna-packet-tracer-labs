@@ -1,71 +1,42 @@
-# CCNA 200-301 Networking & Packet Tracer Lab Portfolio
+# CCNA Packet Tracer Lab Portfolio
+**Venkat Dastami | IT Support & Network Support**
 
-Hands-on networking practice created while preparing for the **Cisco CCNA 200-301** certification.
+## Project overview
 
-This repository combines **manual networking calculations and design work** with Cisco Packet Tracer labs. It documents IPv4 addressing, binary conversion, subnetting, CIDR, VLSM, routing, switching, access control, and troubleshooting.
+Hands-on networking practice in Cisco Packet Tracer, developed while preparing for CCNA 200-301 and building toward entry-level IT-support and networking roles. This portfolio connects IPv4 address planning with router and switch configuration, traffic control, and connectivity troubleshooting.
 
-> **Status:** CCNA 200-301 in progress
+The repository contains **11 Packet Tracer files across nine lab folders**, plus networking-fundamentals notes. The index below summarizes the existing files and their accompanying documentation; it does not represent independently verified test results.
 
-## Lab Portfolio
+## Lab index
 
-| # | Topic | Practice |
+Each linked folder includes a README describing the practice and the listed `.pkt` files.
+
+| Lab | Files | Documented focus |
 |---|---|---|
-| 01 | Static Routing | 4 Router Topology |
-| 02 | VLSM | Point-to-Point Subnet Topology |
-| 03 | RIP | Configuring RIP |
-| 04 | EIGRP | EIGRP Configuration Topology |
-| 05 | OSPF | OSPF Configuration + Backbone Area |
-| 06 | VLANs | Creating and Managing VLANs |
-| 07 | Inter-VLAN Routing | SVI and Router-on-a-Stick (ROAS) |
-| 08 | STP | Spanning Tree Protocol |
-| 09 | ACLs | Standard ACLs + Extended ACLs with Telnet |
-| 10 | Networking Fundamentals | IPv4, Binary, CIDR, Subnetting, VLSM & Routing Calculations |
+| [01 · Static routing](01-static-routing/) | `4-router-topology.pkt` | Interface addressing, static/default routes, next hops, forward and return paths |
+| [02 · VLSM](02-vlsm/) | `vlsm-point-to-point-subnet.pkt` | /25–/28 LANs, /30 links, static routing, DHCP/default-gateway troubleshooting |
+| [03 · RIP](03-rip/) | `configuring-rip.pkt` | Route advertisement, learned routes, connectivity testing |
+| [04 · EIGRP](04-eigrp/) | `eigrp-configuration-topology.pkt` | Process configuration, neighbors, network advertisement, routing tables |
+| [05 · OSPF](05-ospf/) | `ospf-single-area-topology.pkt`; `ospf-backbone-area-topology.pkt` | Single-area configuration, wildcard masks, neighbors, backbone/multi-area concepts |
+| [06 · VLANs](06-vlans/) | `creating-and-managing-vlans.pkt` | VLAN creation, access ports, membership, same-VLAN communication, trunk concepts |
+| [07 · Inter-VLAN routing](07-inter-vlan-routing/) | `inter-vlan-routing-svi-roas.pkt` | SVIs, router-on-a-stick, 802.1Q subinterfaces, VLAN gateways |
+| [08 · STP](08-stp/) | `stp-spanning-tree-protocol.pkt` | Root bridge, port roles, loop prevention, redundancy and convergence |
+| [09 · ACLs](09-acls/) | `access-control-lists.pkt`; `extended-acl-telnet.pkt` | Standard/extended ACLs, permit/deny logic, placement, Telnet access control |
+| [10 · Networking fundamentals](10-networking-fundamentals/) | Written notes; no separate `.pkt` file | OSI/TCP-IP models, binary conversion, IPv4/CIDR, subnetting, VLSM and address planning |
 
-## Networking Fundamentals Practiced
+## Technologies and protocols practiced
 
-Before and alongside Packet Tracer configuration, I worked through networking concepts and calculations by hand, including:
+- **Tools:** Cisco Packet Tracer and Cisco IOS CLI.
+- **Addressing:** IPv4, CIDR, subnet masks, usable host ranges, VLSM and /30 point-to-point networks.
+- **Routing:** Static/default routes, RIP, EIGRP and OSPF.
+- **Switching:** VLANs, 802.1Q trunks, SVIs, router-on-a-stick and STP.
+- **Services and traffic control:** DHCP/default-gateway troubleshooting, standard/extended ACLs and Telnet access-control scenarios.
 
-- OSI and TCP/IP models
-- Unicast, multicast, and broadcast
-- IPv4 32-bit addressing
-- Binary-to-decimal and decimal-to-binary conversion
-- Historical Class A/B/C concepts
-- CIDR and prefix lengths
-- Network and host portions
-- Subnet masks
-- Network IDs and broadcast IDs
-- Usable host ranges
-- Subnet increments / block sizes
-- /24, /25, /26, /27, /28, and /30 subnetting
-- Larger Class A and Class B subnetting exercises
-- VLSM and largest-subnet-first allocation
-- Point-to-point /30 addressing
-- Department-based network design
-- Static-route next-hop planning
-- Floating / backup static-route concepts
-- DHCP and default-gateway troubleshooting
+## Troubleshooting skills demonstrated
 
-## Cisco Packet Tracer Skills Practiced
+The lab notes document practice identifying addressing and subnet-mask mismatches, incorrect default gateways, DHCP pool errors, missing or incorrect static-route next hops, and failed end-to-end connectivity. Switching and routing notes also cover VLAN membership, trunk links, learned routes and OSPF neighbor verification.
 
-- Cisco IOS CLI
-- IPv4 addressing and subnetting
-- VLSM
-- DHCP
-- Static and default routing
-- RIP
-- EIGRP
-- OSPF
-- VLAN creation and access-port assignment
-- 802.1Q trunking
-- Inter-VLAN routing using SVI and Router-on-a-Stick
-- Spanning Tree Protocol (STP)
-- Standard and extended ACLs
-- Telnet access-control scenarios
-- Multi-router and multi-switch troubleshooting
-
-## Troubleshooting & Verification
-
-Commands used throughout the labs include:
+Verification commands documented in the repository include:
 
 ```text
 show ip interface brief
@@ -78,69 +49,25 @@ ping
 traceroute
 ```
 
-Troubleshooting practice included incorrect addressing, subnet masks, default gateways, DHCP configuration, interface state, static-route next hops, and end-to-end reachability.
+These exercises build a structured approach to support incidents: inspect addressing and interface state, follow the traffic path, review routing or VLAN configuration, and retest reachability.
 
-## Learning Approach
+## Setup and review
 
-My workflow has been:
+1. Install Cisco Packet Tracer. The repository does not specify a required version.
+2. Download this repository using **Code → Download ZIP**, or clone it:
+   ```bash
+   git clone https://github.com/Venkat-Dastami/ccna-packet-tracer-labs.git
+   ```
+3. Read the chosen lab's README and open its `.pkt` file in Packet Tracer.
+4. Inspect the topology, endpoint addressing and device CLI configurations.
+5. Use the relevant verification commands and connectivity tests; use Simulation Mode to follow packet flow. Save a separate copy before experimenting.
 
-```text
-Networking fundamentals
-        ↓
-IPv4 + Binary
-        ↓
-Subnetting + CIDR
-        ↓
-VLSM
-        ↓
-Router/interface configuration
-        ↓
-DHCP
-        ↓
-Static/default/floating routes
-        ↓
-Dynamic routing
-RIP → EIGRP → OSPF
-        ↓
-Switching
-VLANs → Trunks → Inter-VLAN → STP
-        ↓
-Security
-ACLs
-        ↓
-Troubleshooting
-ping / traceroute / show commands
-```
+## Discussing the labs in IT-support interviews
 
-## Repository Structure
+Start with a specific lab and explain its purpose, the configuration you worked on, and how you checked it. For a troubleshooting example, describe **the symptom → checks → cause → change → retest**, using only an issue and outcome you can demonstrate.
 
-```text
-ccna-packet-tracer-labs/
-├── 01-static-routing/
-├── 02-vlsm/
-├── 03-rip/
-├── 04-eigrp/
-├── 05-ospf/
-├── 06-vlans/
-├── 07-inter-vlan-routing/
-├── 08-stp/
-├── 09-acls/
-└── 10-networking-fundamentals/
-```
+- **Static routing/VLSM:** Explain how you check a client's address, mask and gateway, then trace next hops and the return path.
+- **VLANs/inter-VLAN routing:** Explain how VLAN membership, trunks and gateways affect communication between devices.
+- **ACLs:** Explain how you distinguish a reachability problem from traffic intentionally blocked by policy.
 
-## Opening the Packet Tracer Labs
-
-1. Install **Cisco Packet Tracer**.
-2. Download the desired `.pkt` file.
-3. Open it in Packet Tracer.
-4. Inspect the topology and device configurations.
-5. Use Simulation Mode, `ping`, `traceroute`, and Cisco IOS verification commands to test connectivity.
-
-## About
-
-I am developing hands-on networking and troubleshooting skills while preparing for CCNA 200-301, with a career focus on technical support, network support, and systems administration.
-
----
-
-**Author:** Venkat Dastami  
-**GitHub:** [Venkat-Dastami](https://github.com/Venkat-Dastami)
+Bring a lab file to demonstrate your reasoning. Describe this work as simulated networking practice, and support any claimed fix or successful result with the actual configuration and test output.
